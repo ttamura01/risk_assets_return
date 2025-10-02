@@ -1,5 +1,5 @@
 # asset return in 2025
-setwd("/Users/takayukitamura/Documents/R_Computing")
+setwd("/Users/takayukitamura/Documents/R_Computing/risk_assets_return")
 library(tidyverse)
 library(patchwork)
 library(ggtext)
@@ -7,7 +7,7 @@ library(glue)
 library(scales)
 library(plotly)
 
-return <- read_csv("/Users/takayukitamura/Documents/R_Computing/asset_return_2025.csv")
+return <- read_csv("asset_return_2025.csv")
 #return <- read_csv("asset_return_2025.csv", col_names = c("date", "S.P500", "Nasdaq", "Google", "Tesla", "Amazon", "Microsoft", "Meta", "Apple", "Nvidia", "JP.Morgan", "Citigroup", "Goldman.Sachs", "Gold", "Oil", "Bitcoin"))
 
 # return <- return[-154,]
@@ -15,7 +15,6 @@ return <- read_csv("/Users/takayukitamura/Documents/R_Computing/asset_return_202
 # return[return$date == "20277", "date"] <- "2025-07-08"
 # return <- within(return, date[date == "20277"] <- "2025-07-08")
 # return <- return %>% mutate(return = if_else(date == "20277", "2025-07-08", date))
-
 
 # return %>% slice_max(date)
 
@@ -28,9 +27,7 @@ tail(return)
 return$date <- as.Date(return$date, format = "%Y-%m-%d")
 
 updates <- tribble(~date, ~`S&P500`, ~"NASDAQ", ~"Google",  ~"Tesla", ~"Amazon", ~"Microsoft",  ~"Meta",  ~"Apple", ~"NVIDIA", ~`JP Morgan`, ~"Citigroup", ~`Goldman Sachs`,  ~"Gold", ~"Oil", ~"Bitcoin",
-                   "2025-09-23", 0.132,	0.169,	0.325,	0.055,	0.006,	0.208,	0.290,	0.016,	0.329,	0.305,	0.463,	0.408,	0.431,	-0.125,	0.196,
-                   "2025-09-24", 0.129,	0.165,	0.301,	0.096,	0.004,	0.210,	0.299,	0.008,	0.318,	0.307,	0.444,	0.384,	0.418,	-0.103,	0.215,
-                   "2025-09-25", 0.123,	0.159,	0.295,	0.048,	-0.006,	0.203,	0.279,	0.026,	0.323,	0.308,	0.451,	0.388,	0.424,	-0.103,	0.171)
+                   "2025-10-01",	0.141,	0.178,	0.289,	0.138,	0.006,	0.233,	0.225,	0.020,	0.394,	0.296,	0.402,	0.372,	0.470,	-0.147,	0.258)
 
 updates$date <- as.Date(updates$date, format = "%Y-%m-%d")
 # 
