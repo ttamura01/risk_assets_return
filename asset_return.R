@@ -10,11 +10,11 @@ library(plotly)
 return <- read_csv("asset_return_2025.csv")
 #return <- read_csv("asset_return_2025.csv", col_names = c("date", "S.P500", "Nasdaq", "Google", "Tesla", "Amazon", "Microsoft", "Meta", "Apple", "Nvidia", "JP.Morgan", "Citigroup", "Goldman.Sachs", "Gold", "Oil", "Bitcoin"))
 
-# return <- return[-154,]
+# return <- return[-193,] 
 # return <- return[-c(126, 127), ]
-# return[return$date == "20277", "date"] <- "2025-07-08"
+# return[return$date == "20277", "date"] <- "2025-10-08"
 # return <- within(return, date[date == "20277"] <- "2025-07-08")
-# return <- return %>% mutate(return = if_else(date == "20277", "2025-07-08", date))
+# return <- return %>% mutate(return = if_else(date == "2025-10-07", "2025-10-08", date))
 
 # return %>% slice_max(date)
 
@@ -27,7 +27,7 @@ tail(return)
 return$date <- as.Date(return$date, format = "%Y-%m-%d")
 
 updates <- tribble(~date, ~`S&P500`, ~"NASDAQ", ~"Google",  ~"Tesla", ~"Amazon", ~"Microsoft",  ~"Meta",  ~"Apple", ~"NVIDIA", ~`JP Morgan`, ~"Citigroup", ~`Goldman Sachs`,  ~"Gold", ~"Oil", ~"Bitcoin",
-                   "2025-10-07",	0.142,	0.180,	0.298,	0.072,	0.011,	0.243,	0.218,	0.024,	0.378,	0.284,	0.389,	0.379,	0.513,	-0.137,	0.302)
+                   "2025-10-08",	0.148,	0.193,	0.289,	0.086,	0.027,	0.245,	0.226,	0.031,	0.408,	0.268,	0.374,	0.356,	0.538,	-0.137,	0.322)
 
 updates$date <- as.Date(updates$date, format = "%Y-%m-%d")
 # 
