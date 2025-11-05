@@ -12,8 +12,8 @@ return <- read_csv("asset_return_2025.csv")
 
 # return <- return[-193,] 
 # return <- return[-c(126, 127), ]
-# return[return$date == "20277", "date"] <- "2025-10-08"
-# return <- within(return, date[date == "20277"] <- "2025-07-08")
+# return[return$date == "2025-11-01", "date"] <- "2025-11-03"
+# return <- within(return, date[date == "2025-11-01"] <- "2025-11-03")
 # return <- return %>% mutate(return = if_else(date == "2025-10-07", "2025-10-08", date))
 
 # return %>% slice_max(date)
@@ -27,7 +27,7 @@ tail(return)
 return$date <- as.Date(return$date, format = "%Y-%m-%d")
 
 updates <- tribble(~date, ~`S&P500`, ~"NASDAQ", ~"Google",  ~"Tesla", ~"Amazon", ~"Microsoft",  ~"Meta",  ~"Apple", ~"NVIDIA", ~`JP Morgan`, ~"Citigroup", ~`Goldman Sachs`,  ~"Gold", ~"Oil", ~"Bitcoin",
-                   "2025-11-01", 0.165,	0.234,	0.492,	0.160,	0.158,	0.227,	0.089,	0.074,	0.541,	0.291,	0.444,	0.372,	0.523,	-0.157,	0.141)
+                   "2025-11-04", 0.151,	0.209,	0.460,	0.100,	0.136,	0.220,	0.071,	0.078,	0.480,	0.290,	0.435,	0.381,	0.496,	-0.164,	0.078)
 
 updates$date <- as.Date(updates$date, format = "%Y-%m-%d")
 # 
