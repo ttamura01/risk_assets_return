@@ -64,6 +64,7 @@ asset_return %>%
     legend.key.size = unit(30, "pt"),
     # legend.key.spacing.x = unit(3, "pt"),
     legend.box.spacing = unit(5, "pt"),
+    legend.text = element_text(size = 12),
     axis.text.y = element_text(face = "bold"),
     panel.background = element_blank(),
     axis.ticks = element_blank()
