@@ -27,7 +27,8 @@ tail(return)
 return$date <- as.Date(return$date, format = "%Y-%m-%d")
 
 updates <- tribble(~date, ~`S&P500`, ~"NASDAQ", ~"Google",  ~"Tesla", ~"Amazon", ~"Microsoft",  ~"Meta",  ~"Apple", ~"NVIDIA", ~`JP Morgan`, ~"Citigroup", ~`Goldman Sachs`,  ~"Gold", ~"Oil", ~"Bitcoin",
-                   "2025-11-04", 0.151,	0.209,	0.460,	0.100,	0.136,	0.220,	0.071,	0.078,	0.480,	0.290,	0.435,	0.381,	0.496,	-0.164,	0.078)
+                   "2025-11-05", 0.156,	0.217,	0.495,	0.144,	0.140,	0.203,	0.086,	0.079,	0.454,	0.300,	0.445,	0.385,	0.514,	-0.177,	0.112,
+                   "2025-11-06", 0.143,	0.194,	0.498,	0.104,	0.108,	0.179,	0.057,	0.077,	0.401,	0.307,	0.433,	0.375,	0.512,	-0.180,	0.080)
 
 updates$date <- as.Date(updates$date, format = "%Y-%m-%d")
 # 
