@@ -2,26 +2,25 @@
 setwd("/Users/takayukitamura/Documents/R_Computing/risk_assets_return")
 
 library(tidyverse)
-library(showtext)
 library(ggtext)
 
 asset_return <- tribble(
   ~Asset, ~"2024", ~"2025",
-  "S&P 500", 24.01, 16.30,
-  "NASDAQ", 28.64, 23.43,
-  "Google",	35.13,	49.19,
-  "Tesla",	62.52,	15.98,
-  "Amazon", 44.39, 15.78,
-  "Microsoft", 12.09, 22.66,
-  "Meta",	65.42,	8.92,
-  "Apple",	30.07,	7.44,
-  "NVIDIA",	171.18,	54.05,
-  "JP Morgan",	40.92,	29.05,
-  "Citigroup",	40.92,	44.35,
-  "Goldman Sachs",	48.44,	37.18,
-  "Gold", 	26.66,	52.31,
-  "WTI",	0.77,	-16.83,
-  "Bitcoin",	119.61,	11.17)
+  "S&P 500", 24.01, 14.40,
+  "NASDAQ", 28.64, 19.13,
+  "Google",	35.13,	46.87,
+  "Tesla",	62.52,	6.36,
+  "Amazon", 44.39, 11.40,
+  "Microsoft", 12.09, 17.87,
+  "Meta",	65.42,	6.18,
+  "Apple",	30.07,	7.21,
+  "NVIDIA",	171.18,	40.11,
+  "JP Morgan",	40.92, 31.08,
+  "Citigroup",	40.92,	43.19,
+  "Goldman Sachs",	48.44,	37.32,
+  "Gold", 	26.66,	52.11,
+  "WTI",	0.77,	-17.52,
+  "Bitcoin",	119.61,	9.38)
   
 order_2025 <- asset_return %>%
     arrange(`2025`) %>%
