@@ -26,8 +26,11 @@ tail(return)
 
 return$date <- as.Date(return$date, format = "%Y-%m-%d")
 
+daily <- "0.164	0.215	0.532	0.089	0.135	0.207	0.071	0.099	0.438	0.317	0.431	0.415	0.569	-0.157	0.100"
+daily <- gsub("\\s+", ",", daily)
+
 updates <- tribble(~date, ~`S&P500`, ~"NASDAQ", ~"Google",  ~"Tesla", ~"Amazon", ~"Microsoft",  ~"Meta",  ~"Apple", ~"NVIDIA", ~`JP Morgan`, ~"Citigroup", ~`Goldman Sachs`,  ~"Gold", ~"Oil", ~"Bitcoin",
-                   "2025-11-10", 0.162,	0.218,	0.526,	0.102,	0.132,	0.200,	0.079,	0.076,	0.482,	0.322,	0.442,	0.392,	0.563,	-0.170,	0.135)
+                   "2025-11-11", 0.164,0.215,0.532,0.089,0.135,0.207,0.071,0.099,0.438,0.317,0.431,0.415,0.569,-0.157,0.100)
 
 updates$date <- as.Date(updates$date, format = "%Y-%m-%d")
 # 
