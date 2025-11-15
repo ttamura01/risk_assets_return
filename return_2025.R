@@ -6,21 +6,21 @@ library(ggtext)
 
 asset_return <- tribble(
   ~Asset, ~"2024", ~"2025",
-  "S&P 500", 24.01, 14.40,
-  "NASDAQ", 28.64, 19.13,
-  "Google",	35.13,	46.87,
-  "Tesla",	62.52,	6.36,
-  "Amazon", 44.39, 11.40,
-  "Microsoft", 12.09, 17.87,
-  "Meta",	65.42,	6.18,
-  "Apple",	30.07,	7.21,
-  "NVIDIA",	171.18,	40.11,
-  "JP Morgan",	40.92, 31.08,
-  "Citigroup",	40.92,	43.19,
-  "Goldman Sachs",	48.44,	37.32,
-  "Gold", 	26.66,	52.11,
-  "WTI",	0.77,	-17.52,
-  "Bitcoin",	119.61,	9.38)
+  "S&P 500", 24.01, 14.49,
+  "NASDAQ", 28.64, 18.59,
+  "Google",	35.13,	45.44,
+  "Tesla",	62.52,	0.13,
+  "Amazon", 44.39, 6.97,
+  "Microsoft", 12.09, 21.04,
+  "Meta",	65.42,	4.09,
+  "Apple",	30.07,	8.78,
+  "NVIDIA",	171.18,	41.61,
+  "JP Morgan",	40.92, 26.66,
+  "Citigroup",	40.92,	42.49,
+  "Goldman Sachs",	48.44,	38.12,
+  "Gold", 	26.66,	55.27,
+  "WTI",	0.77,	-18.80,
+  "Bitcoin",	119.61,	2.84)
   
 order_2025 <- asset_return %>%
     arrange(`2025`) %>%
