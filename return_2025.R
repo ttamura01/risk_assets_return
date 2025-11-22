@@ -6,21 +6,21 @@ library(ggtext)
 
 asset_return <- tribble(
   ~Asset, ~"2024", ~"2025",
-  "S&P 500", 24.01, 14.49,
-  "NASDAQ", 28.64, 18.59,
-  "Google",	35.13,	45.44,
-  "Tesla",	62.52,	0.13,
-  "Amazon", 44.39, 6.97,
-  "Microsoft", 12.09, 21.04,
-  "Meta",	65.42,	4.09,
-  "Apple",	30.07,	8.78,
-  "NVIDIA",	171.18,	41.61,
-  "JP Morgan",	40.92, 26.66,
-  "Citigroup",	40.92,	42.49,
-  "Goldman Sachs",	48.44,	38.12,
-  "Gold", 	26.66,	55.27,
-  "WTI",	0.77,	-18.80,
-  "Bitcoin",	119.61,	2.84)
+  "S&P 500", 24.01, 12.26,
+  "NASDAQ", 28.64, 15.34,
+  "Google",	35.13,	57.35,
+  "Tesla",	62.52, -3.16,
+  "Amazon", 44.39, 0.59,
+  "Microsoft", 12.09, 12.01,
+  "Meta",	65.42, 1.49,
+  "Apple",	30.07,	8.41,
+  "NVIDIA",	171.18,	33.20,
+  "JP Morgan",	40.92, 24.33,
+  "Citigroup",	40.92,	40.22,
+  "Goldman Sachs",	48.44,	35.17,
+  "Gold", 	26.66,	54.57,
+  "WTI",	0.77,	-19.99,
+  "Bitcoin",	119.61,	-9.51)
   
 order_2025 <- asset_return %>%
     arrange(`2025`) %>%
@@ -53,7 +53,7 @@ asset_return %>%
   coord_cartesian(clip = "off", expand = TRUE, xlim = c(-35, 185)) +
   labs(
     title = "Asset Returns: 2024 vs 2025",
-    x = "Return (%)", y = NULL, fill = "Year"
+    x = "Return (%)", y = NULL, fill = NULL
   ) +
   theme(
     # legend.position = "top",
