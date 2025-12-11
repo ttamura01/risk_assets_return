@@ -10,7 +10,7 @@ library(plotly)
 return <- read_csv("asset_return_2025.csv")
 #return <- read_csv("asset_return_2025.csv", col_names = c("date", "S.P500", "Nasdaq", "Google", "Tesla", "Amazon", "Microsoft", "Meta", "Apple", "Nvidia", "JP.Morgan", "Citigroup", "Goldman.Sachs", "Gold", "Oil", "Bitcoin"))
 
-# return <- return[-233,]
+# return <- return[-236,]
 # return <- return[-c(126, 127), ]
 # return[return$date == "2025-11-01", "date"] <- "2025-11-03"
 # return <- within(return, date[date == "2025-11-01"] <- "2025-11-03")
@@ -26,12 +26,12 @@ tail(return)
 
 return$date <- as.Date(return$date, format = "%Y-%m-%d")
 
-daily <- "0.163	0.221	0.669	0.102	0.039	0.167	0.122	0.107	0.377	0.254	0.555	0.531	0.600	-0.196	-0.010"
+daily <- "0.171	0.225	0.686	0.118	0.056	0.135	0.110	0.113	0.369	0.294	0.578	0.553	0.607	-0.193	-0.010"
 daily <- gsub("\\s+", ",", daily)
 daily
 
 updates <- tribble(~date, ~`S&P500`, ~"NASDAQ", ~"Google",  ~"Tesla", ~"Amazon", ~"Microsoft",  ~"Meta",  ~"Apple", ~"NVIDIA", ~`JP Morgan`, ~"Citigroup", ~`Goldman Sachs`,  ~"Gold", ~"Oil", ~"Bitcoin",
-                   "2025-12-09",0.163,0.221,0.669,0.102,0.039,0.167,0.122,0.107,0.377,0.254,0.555,0.531,0.600,-0.196,-0.010)
+                   "2025-12-10",0.171,0.225,0.686,0.118,0.056,0.135,0.110,0.113,0.369,0.294,0.578,0.553,0.607,-0.193,-0.010)
 
 updates$date <- as.Date(updates$date, format = "%Y-%m-%d")
 # 
